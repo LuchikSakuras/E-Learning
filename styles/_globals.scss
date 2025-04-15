@@ -1,0 +1,78 @@
+@use 'helpers' as *;
+
+body {
+    @include fluid-text(18, 14);
+ 
+    font-family: var(--font-family-base);
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-grey-15);
+    background-color: var(--color-white-95);
+}
+
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    font-weight: 600;
+}
+
+h1, .h1 {
+    @include fluid-text(48, 28);
+}
+
+
+h2, .h2 {
+    @include fluid-text(38, 28);
+}
+
+
+h3, .h3 {
+    @include fluid-text(24, 18);
+}
+
+
+h4, .h4 {
+    @include fluid-text(22, 16);
+
+    line-height: 1.7;
+}
+
+
+a,
+button,
+input,
+textarea,
+svg * {
+    transition-duration: var(--transition-duration);
+}
+ 
+a {
+    color: inherit;
+
+    @include hover {
+        color: var(--color-orange-50);
+    }
+
+    &[class] {
+        text-decoration: none;
+    }
+}
+ 
+a,
+button {
+    &[aria-label] {
+      position: relative;
+
+      &::before {
+          @include abs-center;
+          @include square(#{rem(44)});
+
+
+          content: '';
+      }
+    }
+}

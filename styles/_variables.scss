@@ -1,0 +1,55 @@
+@use './helpers' as *;
+
+:root {
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+
+    --color-orange-50: #FF9500;
+    --color-orange-70: #FFBF66;
+    --color-orange-75: #FFCA80;
+    --color-orange-80: #FFD499;
+    --color-orange-90: #FFEACC;
+    --color-orange-95: #FFF4E5;
+    --color-orange-97: #FFF9F0;
+    --color-orange-99: #FFFDFA;
+
+    --color-white-90: #E4E4E7;
+    --color-white-95: #F1F1F3;
+    --color-white-97: #F7F7F8;
+    --color-white-99: #FCFCFD;
+
+    --color-grey-10: #191919;
+    --color-grey-15: #262626;
+    --color-grey-20: #333333;
+    --color-grey-30: #4C4C4D;
+    --color-grey-35: #59595A;
+    --color-grey-40: #656567;
+    --color-grey-60: #98989A;
+    --color-grey-70: #B3B3B3;
+
+    --border-light: 1px solid var(--color-white-95);
+    --border-orange: 1px solid var(--color-orange-95);
+
+    --border-radius-l: #{rem(12)};
+    --border-radius-m: #{rem(10)};
+    --border-radius-s: #{rem(8)};
+    --border-radius-xs: #{rem(6)};
+    --border-radius-xxs: #{rem(4)};
+ 
+    --font-family-base: 'BeVietnamPro', sans-serif;
+ 
+    --container-width: #{rem(1596)};
+    --container-padding-x: #{rem(16)};
+ 
+    --section-padding-y: #{rem(50)};
+ 
+    --transition-duration: 0.2s;
+
+    @include tablet {
+      --section-padding-y: #{rem(40)};
+    }
+
+    @include mobile {
+      --section-padding-y: #{rem(25)};
+    }
+  }
