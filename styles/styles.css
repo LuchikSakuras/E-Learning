@@ -226,4 +226,79 @@ svg * {
   }
 }
 
+body {
+  font-size: clamp(0.875rem, 0.8086734694rem + 0.2721088435vw, 1.125rem);
+  font-family: var(--font-family-base);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-grey-15);
+  background-color: var(--color-white-95);
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-weight: 600;
+}
+
+h1, .h1 {
+  font-size: clamp(1.75rem, 1.4183673469rem + 1.3605442177vw, 3rem);
+}
+
+h2, .h2 {
+  font-size: clamp(1.75rem, 1.5841836735rem + 0.6802721088vw, 2.375rem);
+}
+
+h3, .h3 {
+  font-size: clamp(1.125rem, 1.0255102041rem + 0.4081632653vw, 1.5rem);
+}
+
+h4, .h4 {
+  font-size: clamp(1rem, 0.9005102041rem + 0.4081632653vw, 1.375rem);
+  line-height: 1.7;
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: inherit;
+}
+@media (any-hover: hover) {
+  a:hover {
+    color: var(--color-orange-50);
+  }
+}
+@media (any-hover: none) {
+  a:active {
+    color: var(--color-orange-50);
+  }
+}
+a[class] {
+  text-decoration: none;
+}
+
+a[aria-label],
+button[aria-label] {
+  position: relative;
+}
+a[aria-label]::before,
+button[aria-label]::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 2.75rem;
+  height: 2.75rem;
+  content: "";
+}
+
 /*# sourceMappingURL=styles.css.map */
