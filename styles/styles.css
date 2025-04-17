@@ -232,6 +232,10 @@ svg * {
   }
 }
 
+html.is-lock {
+  overflow: hidden;
+}
+
 body {
   font-size: clamp(0.875rem, 0.8086734694rem + 0.2721088435vw, 1.125rem);
   font-family: var(--font-family-base);
