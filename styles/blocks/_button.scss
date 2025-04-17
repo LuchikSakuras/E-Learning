@@ -1,0 +1,30 @@
+@use '../helpers' as *;
+
+.button {
+    padding: fluid-to-laptop(14, 12) fluid(34, 20);
+    border-radius: var(--border-radius-s);
+    border: none;
+
+    &--main {
+        background-color: var(--color-orange-50);
+        color: var(--color-white);
+
+        @include hover {
+            scale: 1.05;
+            background-color: var(--color-grey-40);
+        }
+    }
+
+    @include laptop {
+        border-radius: var(--border-radius-xs);
+    }
+
+    &--transparent {
+        background-color: transparent;
+        color: var(--color-grey-15);
+
+        @include hover {
+            color: var(--color-orange-50);
+        }
+    }
+}
