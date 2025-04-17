@@ -1,0 +1,10 @@
+@use '../helpers' as *;
+
+.tile {
+    background-color: var(--color-white-99);
+    border-radius: var(--border-radius-l);
+
+    @include laptop {
+        border-radius: var(--border-radius-s);
+    }
+}
