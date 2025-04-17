@@ -1,0 +1,115 @@
+@use '../helpers' as *;
+
+.hero {
+    height: 100%;
+    padding-top: var(--section-padding-y);
+    font-weight: 500;
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        row-gap: fluid-to-laptop(60, 50);
+        padding-block: var(--section-padding-y);
+        max-width: fluid-to-laptop(965, 941);
+        text-align: center;
+    }
+
+    &__body {
+        display: grid;
+        row-gap: fluid-to-laptop(10, 6);
+
+        &-inner {
+            display: grid;
+            row-gap: fluid-to-laptop(20, 16);
+        }
+    }
+
+    &__title {
+        @include fluid-text(48, 16);
+
+        &--accent {
+            color: var(--color-orange-50);
+        }
+    
+        &-inner {
+            display: flex;
+            position: relative;
+            column-gap: #{rem(10)};
+            margin-inline: auto;
+            align-items: center;
+            flex-shrink: 0;
+            padding: fluid-to-laptop(20, 15);
+            width: fit-content;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: calc(#{rem(30)} * -1);
+                left: calc(#{rem(30)} * -1);
+                background: url('../../icon/abstract-line.svg');
+                width: #{rem(39)};
+                height: #{rem(43)};
+
+                @include mobile {
+                    top: calc(#{rem(15)} * -1);
+                    left: calc(#{rem(15)} * -1);
+                }
+            }
+        }
+    }
+
+    &__description {
+        @include mobile {
+            max-width: #{rem(297)};
+            margin-inline: auto;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        column-gap: #{rem(12)};
+        margin-inline: auto;
+    }
+
+    &__partners {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: fluid(30, 10);
+        padding-block: var(--section-padding-y);
+
+        @include laptop {
+            overflow-x: auto;
+        }
+        
+        &-wrap {
+            padding: fluid-to-laptop(30, 20) fluid(76, 21);
+
+            &:not(:last-child) {
+                border-right: var(--border-light);
+            }
+        }
+
+        &-image {
+            min-width: #{rem(60)};
+        }
+    }
+
+    &__icon{ 
+        &-inner {
+            --iconInnerSize: #{rem(62)};
+
+            @include square(var(--iconInnerSize));
+            
+            display: grid;
+            place-items: center;
+            padding: fluid-to-laptop(14, 12);
+            background-color: var(--color-orange-95);
+            border-radius: var(--border-radius-xs);
+
+            @include laptop {
+                --iconInnerSize: #{rem(48)};
+            }
+        }
+    }
+}
