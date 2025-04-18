@@ -457,6 +457,7 @@ button[aria-label]::before {
   position: sticky;
   z-index: 100;
   top: 0;
+  background-color: var(--color-white-95);
 }
 .header__promo {
   background-color: var(--color-orange-50);
@@ -534,7 +535,7 @@ button[aria-label]::before {
 
 .hero {
   height: 100%;
-  padding-top: var(--section-padding-y);
+  padding-block: var(--section-padding-y);
   font-weight: 500;
 }
 .hero__main {
@@ -629,6 +630,80 @@ button[aria-label]::before {
 @media (width <= 1400px) {
   .hero__icon-inner {
     --iconInnerSize: 3rem;
+  }
+}
+
+.video {
+  padding-block: var(--section-padding-y);
+}
+
+.video-player {
+  position: relative;
+}
+.video-player__video {
+  border-radius: var(--border-radius-l);
+}
+@media (width <= 1400px) {
+  .video-player__video {
+    border-radius: var(--border-radius-m);
+  }
+}
+.video-player__pannel {
+  position: absolute;
+  inset: 0;
+  padding: 1.875rem;
+  transition-duration: var(--transition-duration);
+}
+.video-player__pannel:not(.is-active) {
+  opacity: 0;
+  visibility: hidden;
+}
+.video-player__pannel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%, lightgray 50%);
+  border-radius: var(--border-radius-l);
+}
+@media (width <= 1400px) {
+  .video-player__pannel::before {
+    border-radius: var(--border-radius-m);
+  }
+}
+.video-player__pannel * {
+  position: relative;
+}
+.video-player__play-button {
+  --size: 5.25rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: var(--size);
+  height: var(--size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 6px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  color: var(--color-white);
+}
+@media (any-hover: hover) {
+  .video-player__play-button:hover {
+    color: var(--color-accent);
+  }
+}
+@media (any-hover: none) {
+  .video-player__play-button:active {
+    color: var(--color-accent);
+  }
+}
+@media (width <= 1400px) {
+  .video-player__play-button {
+    --size: 3.875rem;
+    border: 4px solid rgba(255, 255, 255, 0.3);
   }
 }
 
