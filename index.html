@@ -70,7 +70,7 @@
         </div>
     </header>
     <main>
-        <section class="hero">
+        <section class="hero" aria-labelledby="hero-title">
             <div class="hero__main container">
                 <h1 class="visually-hidden">Design and Development Courses</h1>
                 <div class="hero__body">
@@ -85,7 +85,7 @@
                                     loading="lazy"
                                 >
                             </div>
-                            <h2 class="hero__title" aria-labelledby="hero-title">
+                            <h2 class="hero__title" id="hero-title">
                                 <span class="hero__title--accent">Unlock</span> Your Creative Potential 
                                 <span class="visually-hidden">with Online Design and Development Courses.</span>
                             </h2>
@@ -167,6 +167,49 @@
                     >
                 </div>
             </div>
+        </section>
+        <section class="video" aria-labelledby="video-title">
+            <h2 class="visually-hidden" id="video-title">Video about us</h2>
+            <div class="video__inner container">
+                <div class="video-player" data-js-video-player>
+                    <video 
+                        class="video-player__video" 
+                        src="/videos/example.mp4"
+                        poster="/image/video/poster.jpg"
+                        width="1596" height="790"
+                        data-js-video-player-video>
+                    </video>
+                    <div class="video-player__pannel is-active" data-js-video-player-pannel>
+                        <button 
+                            class="video-player__play-button" 
+                            type="button" 
+                            aria-label="Play video" 
+                            title="Play video" 
+                            data-js-video-player-play-button>
+                                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.8597 6.24923C11.6622 4.86387 8.7998 6.44307 8.7998 9.04079V34.9593C8.7998 37.557 11.6622 39.1362 13.8597 37.7509L34.4158 24.7916C36.4692 23.497 36.4692 20.5031 34.4158 19.2085L13.8597 6.24923Z" fill="white"/>
+                                </svg>                                                                          
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section" aria-labelledby="benefits-title">
+            <header class="section__header container">
+                <div class="secrion__header-inner">
+                    <h2 class="section__title" id="benefits-title">Benefits</h2>
+                    <div class="section__description">Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et. Ac cum eget habitasse in velit fringilla feugiat senectus in.</div>
+                </div>
+                <div class="section__header-actions">
+                    <button 
+                        class="section__header-button button button--white"
+                        type="button"
+                        data-js-expandable-content-button
+                    >
+                        View All
+                    </button>
+                </div>
+            </header>
         </section>
     </main>
 </body>
