@@ -1,9 +1,13 @@
 @use '../helpers' as *;
 
 .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: fluid-to-laptop(14, 12) fluid(34, 20);
     border-radius: var(--border-radius-s);
     border: none;
+    white-space: nowrap;
 
     @include hover {
         scale: 1.05;
@@ -34,5 +38,20 @@
 
     &--white {
         background-color: var(--color-white);
+
+        @include hover {
+            color: var(--color-orange-50);
+        }
+    }
+
+    &--light-gray {
+        background-color: var(--color-white-97);
+        border: var(--border-light);
+        font-weight: 500;
+
+        @include hover {
+            color: var(--color-orange-50);
+            border-color: var(--color-orange-50);
+        }
     }
 }

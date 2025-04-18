@@ -1,0 +1,65 @@
+@use '../helpers' as *;
+
+.benefits-card {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(50, 30);
+    position: relative;
+    counter-increment: item;
+    padding: fluid(159, 97) fluid(50, 30) fluid(50, 30) fluid(50, 30);
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-l);
+
+    @include laptop {
+        border-radius: var(--border-radius-m);
+    }
+
+    &::after {
+        @include fluid-text(80, 50);
+
+        content: counter(item, decimal-leading-zero);
+
+        position: absolute;
+        top: fluid(50, 30);
+        right: fluid(50, 30);
+        font-weight: 700;
+    }
+
+    &__list {
+        counter-reset: item;
+        list-style: none;
+    }
+
+    &__info {
+        display: grid;
+        row-gap: fluid-to-laptop(14, 10);
+        align-self: flex-start;
+    }
+
+    &__title {
+        color: var(--color-grey-20);
+    }
+
+    &__description {
+        color: var(--color-grey-30);
+    }
+
+    &__link {
+        align-self: flex-end;
+        padding: fluid-to-laptop(20, 14);
+        border-radius: var(--border-radius-s);
+        background-color: var(--color-white-99);
+        border: var(--border-light);
+        color: var(--color-orange-50);
+
+        @include laptop {
+            border-radius: var(--border-radius-xs);
+        }
+
+        @include hover {
+            scale: 1.05;
+            color: var(--color-white);
+            background-color: var(--color-orange-50);
+        }
+    }
+}
