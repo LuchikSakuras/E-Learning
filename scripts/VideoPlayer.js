@@ -13,7 +13,6 @@ class VideoPlayer {
     }
 
     constructor(rootElement) {
-        console.log('start')
         this.rootElement = rootElement
         this.videoElement = this.rootElement.querySelector(this.selectors.video)
         this.pannelElement = this.rootElement.querySelector(this.selectors.pannel)
@@ -41,7 +40,6 @@ class VideoPlayer {
 
 class VideoPlayerCollection {
     constructor() {
-        console.log('start 1')
         this.init()
     }
 

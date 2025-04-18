@@ -1,0 +1,11 @@
+@use '../helpers' as *;
+
+.badge {
+    padding: fluid-to-laptop(10, 8) fluid-to-laptop(14, 12);
+    border-radius: var(--border-radius-s);
+    border: var(--border-light);
+
+    @include laptop {
+        border-radius: var(--border-radius-xs);
+    }
+}

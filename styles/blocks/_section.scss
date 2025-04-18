@@ -1,0 +1,28 @@
+@use '../helpers' as *;
+
+.section {
+    display: grid;
+    row-gap: fluid(80, 40);
+    padding-block: var(--section-padding-y);
+
+    &__header {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        column-gap: fluid-to-laptop(300, 200);
+
+        @include mobile {
+            flex-direction: column;
+            row-gap: #{rem(20)};
+        }
+
+        &-inner {
+            display: grid;
+            row-gap: fluid-to-laptop(6, 4);
+        }
+    }
+
+    &__description {
+        color: var(--color-grey-35);
+    }
+}
