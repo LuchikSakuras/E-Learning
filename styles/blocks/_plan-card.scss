@@ -1,0 +1,119 @@
+@use '../helpers' as *;
+
+.plan-card {
+    display: grid;
+    min-width: fluid(703, 317);
+    background-color: var(--color-white-99);
+    padding: fluid(50, 30) fluid(30, 20) fluid(30, 20) fluid(30, 20);
+    text-align: center;
+    border-radius: var(--border-radius-l);
+    border: var(--border-light);
+    row-gap: fluid(50, 30);
+
+    &__title {
+        width: 100%;
+        background-color: var(--color-orange-97);
+        border: var(--border-orange);
+        padding-block: fluid(12, 8);
+        border-radius: var(--border-radius-xs);
+
+        @include laptop {
+            border-radius: var(--border-radius-xxs);
+        }
+    }
+
+    &__price {
+        @include fluid-text(80, 50);
+
+        font-weight: 600;
+    }
+
+    &__duration {
+        @include fluid-text(20, 14);
+
+        color: var(--color-grey-30);
+        font-weight: 500;
+    }
+
+    &__feauters {
+        display: grid;
+        row-gap: fluid(30, 20);
+        padding-top: fluid(40, 20);
+        background-color: var(--color-white);
+        border-radius: var(--border-radius-l);
+        border: var(--border-light);
+
+        @include laptop {
+            border-radius: var(--border-radius-m);
+        }
+
+        &-title {
+            @include fluid-text(20, 18);
+        }
+    }
+
+    &__list {
+        display: grid;
+        padding-inline: fluid(40, 20);
+        row-gap: #{rem(20)};
+        text-align: start;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        color: var(--color-grey-30);
+        padding: fluid-to-laptop(14, 12);
+        border: var(--border-light);
+        border-radius: var(--border-radius-xs);
+        column-gap: fluid-to-laptop(12, 8);
+
+        @include laptop {
+            border-radius: var(--border-radius-xxs);
+        }
+    }
+
+    &__check {
+        --checkWidth: #{rem(32)};
+
+        @include square(var(--checkWidth));
+
+        position: relative;
+        border: var(--border-light);
+        border-radius: var(--border-radius-xs);
+
+        @include laptop {
+            --checkWidth: #{rem(24)};
+
+            border-radius: var(--border-radius-xxs);
+        }
+
+        &::before {
+            @include abs-center;
+
+            content: '✕';
+            color: var(--color-grey-15);
+            font-size: #{rem(20)};
+            font-weight: 500;
+        }
+
+        &.is-active {
+            background-color: var(--color-orange-95);
+            border: none;
+
+            &::before {
+                content: '✓';
+            }
+        }
+    }
+
+    &__link {
+        width: 100%;
+        justify-content: center;
+        padding-block: fluid-to-laptop(20, 18);
+        color: var(--color-white);
+        font-weight: 600;
+        background-color: var(--color-orange-50);
+        border-radius: 0 0 var(--border-radius-l) var(--border-radius-l);
+    }
+}

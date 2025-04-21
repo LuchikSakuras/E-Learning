@@ -1,0 +1,45 @@
+@use '../helpers' as *;
+
+.testimonials-card {
+    &__description {
+        padding: fluid(50, 24);
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        row-gap: 1rem;
+        padding: fluid(31, 20) fluid(50, 24) fluid(50, 24) fluid(50, 24);
+        padding-top: fluid(31, 20);
+        border-top: var(--border-light);
+        background-color: var(--color-white-99);
+        border-radius: 0 0 var(--border-radius-l) var(--border-radius-l);
+
+        @include laptop {
+            border-radius: 0 0 var(--border-radius-m) var(--border-radius-m);
+        }
+    }
+
+    &__description {
+        color: var(--color-grey-30);
+    }
+
+    &__name {
+        color: var(--color-grey-20);
+        font-weight: 600;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        column-gap: fluid-to-laptop(15, 10);
+    }
+
+    &__image {
+        border-radius: var(--border-radius-s);
+
+        @include laptop {
+            border-radius: var(--border-radius-xs);
+        }
+    }
+}
