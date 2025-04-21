@@ -85,4 +85,10 @@
         justify-content: end;
         column-gap: #{rem(4)};
     }
+
+    &__button {
+        &.is-not-active {
+            pointer-events: none;
+        }
+    }
 }

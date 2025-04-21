@@ -650,6 +650,9 @@ button[aria-label]::before {
   justify-content: end;
   column-gap: 0.25rem;
 }
+.header__button.is-not-active {
+  pointer-events: none;
+}
 
 .hero {
   height: 100%;
