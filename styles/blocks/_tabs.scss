@@ -1,0 +1,32 @@
+@use '../helpers' as *;
+
+.tabs {
+    &__buttons {
+        display: flex;
+        padding: #{rem(12)};
+    }
+
+    &__button {
+        color: var(--color-grey-30);
+
+        &.is-active {
+            background-color: var(--color-orange-50);
+            pointer-events: none;
+            font-weight: 500;
+            color: var(--color-white);
+        }
+    }
+
+    &__content {
+        &:not(.is-active) {
+            display: none;
+        }
+    }
+
+    &__list {
+        background-color: var(--color-white);
+        padding: fluid(80, 20);
+        border-radius: var(--border-radius-l);
+        gap: #{rem(30)};
+    }
+}

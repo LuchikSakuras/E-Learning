@@ -15,6 +15,12 @@
         @include mobile {
             --columns: 1;
         }
+
+        &-resize-to-laptop {
+            @include laptop {
+                --columns: 1;
+            }
+        }
     }
 
     &--3 {

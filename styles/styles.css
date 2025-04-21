@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 ::before,
 ::after {
@@ -269,6 +270,7 @@ h3, .h3 {
 h4, .h4 {
   font-size: clamp(1rem, 0.9005102041rem + 0.4081632653vw, 1.375rem);
   line-height: 1.7;
+  font-weight: 500;
 }
 
 a,
@@ -377,6 +379,17 @@ button[aria-label]::before {
   color: var(--color-grey-35);
 }
 
+.card {
+  display: grid;
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-l);
+}
+@media (width <= 1400px) {
+  .card {
+    border-radius: var(--border-radius-m);
+  }
+}
+
 .grid {
   --columns: 1;
   width: 100%;
@@ -389,6 +402,11 @@ button[aria-label]::before {
 }
 @media (width <= 767px) {
   .grid--2 {
+    --columns: 1;
+  }
+}
+@media (width <= 1400px) {
+  .grid--2-resize-to-laptop {
     --columns: 1;
   }
 }
@@ -874,16 +892,8 @@ button[aria-label]::before {
 }
 
 .courses-card {
-  display: grid;
-  row-gap: clamp(1.5rem, 0.3586956522rem + 1.3043478261vw, 1.875rem);
   padding: clamp(1.5rem, 1.068877551rem + 1.768707483vw, 3.125rem);
-  background-color: var(--color-white);
-  border-radius: var(--border-radius-l);
-}
-@media (width <= 1400px) {
-  .courses-card {
-    border-radius: var(--border-radius-m);
-  }
+  row-gap: clamp(1.5rem, 0.3586956522rem + 1.3043478261vw, 1.875rem);
 }
 .courses-card__image {
   border-radius: var(--border-radius-m);
@@ -903,6 +913,12 @@ button[aria-label]::before {
   align-items: center;
   gap: 0.875rem;
 }
+@media (width <= 767px) {
+  .courses-card__extra {
+    flex-direction: column;
+    align-items: start;
+  }
+}
 .courses-card__extra-badge-inner {
   color: var(--color-grey-30);
   display: flex;
@@ -918,6 +934,176 @@ button[aria-label]::before {
 }
 .courses-card__description {
   color: var(--color-grey-30);
+}
+
+.testimonials-card__description {
+  padding: clamp(1.5rem, 1.068877551rem + 1.768707483vw, 3.125rem);
+}
+.testimonials-card__header {
+  display: flex;
+  justify-content: space-between;
+  row-gap: 1rem;
+  padding: clamp(1.25rem, 1.0676020408rem + 0.7482993197vw, 1.9375rem) clamp(1.5rem, 1.068877551rem + 1.768707483vw, 3.125rem) clamp(1.5rem, 1.068877551rem + 1.768707483vw, 3.125rem) clamp(1.5rem, 1.068877551rem + 1.768707483vw, 3.125rem);
+  padding-top: clamp(1.25rem, 1.0676020408rem + 0.7482993197vw, 1.9375rem);
+  border-top: var(--border-light);
+  background-color: var(--color-white-99);
+  border-radius: 0 0 var(--border-radius-l) var(--border-radius-l);
+}
+@media (width <= 1400px) {
+  .testimonials-card__header {
+    border-radius: 0 0 var(--border-radius-m) var(--border-radius-m);
+  }
+}
+.testimonials-card__description {
+  color: var(--color-grey-30);
+}
+.testimonials-card__name {
+  color: var(--color-grey-20);
+  font-weight: 600;
+}
+.testimonials-card__info {
+  display: flex;
+  align-items: center;
+  column-gap: clamp(0.625rem, -0.3260869565rem + 1.0869565217vw, 0.9375rem);
+}
+.testimonials-card__image {
+  border-radius: var(--border-radius-s);
+}
+@media (width <= 1400px) {
+  .testimonials-card__image {
+    border-radius: var(--border-radius-xs);
+  }
+}
+
+.tabs__buttons {
+  display: flex;
+  padding: 0.75rem;
+}
+.tabs__button {
+  color: var(--color-grey-30);
+}
+.tabs__button.is-active {
+  background-color: var(--color-orange-50);
+  pointer-events: none;
+  font-weight: 500;
+  color: var(--color-white);
+}
+.tabs__content:not(.is-active) {
+  display: none;
+}
+.tabs__list {
+  background-color: var(--color-white);
+  padding: clamp(1.25rem, 0.2551020408rem + 4.0816326531vw, 5rem);
+  border-radius: var(--border-radius-l);
+  gap: 1.875rem;
+}
+
+.plan-card {
+  display: grid;
+  min-width: clamp(19.8125rem, 13.4119897959rem + 26.2585034014vw, 43.9375rem);
+  background-color: var(--color-white-99);
+  padding: clamp(1.875rem, 1.5433673469rem + 1.3605442177vw, 3.125rem) clamp(1.25rem, 1.0841836735rem + 0.6802721088vw, 1.875rem) clamp(1.25rem, 1.0841836735rem + 0.6802721088vw, 1.875rem) clamp(1.25rem, 1.0841836735rem + 0.6802721088vw, 1.875rem);
+  text-align: center;
+  border-radius: var(--border-radius-l);
+  border: var(--border-light);
+  row-gap: clamp(1.875rem, 1.5433673469rem + 1.3605442177vw, 3.125rem);
+}
+.plan-card__title {
+  width: 100%;
+  background-color: var(--color-orange-97);
+  border: var(--border-orange);
+  padding-block: clamp(0.5rem, 0.4336734694rem + 0.2721088435vw, 0.75rem);
+  border-radius: var(--border-radius-xs);
+}
+@media (width <= 1400px) {
+  .plan-card__title {
+    border-radius: var(--border-radius-xxs);
+  }
+}
+.plan-card__price {
+  font-size: clamp(3.125rem, 2.6275510204rem + 2.0408163265vw, 5rem);
+  font-weight: 600;
+}
+.plan-card__duration {
+  font-size: clamp(0.875rem, 0.7755102041rem + 0.4081632653vw, 1.25rem);
+  color: var(--color-grey-30);
+  font-weight: 500;
+}
+.plan-card__feauters {
+  display: grid;
+  row-gap: clamp(1.25rem, 1.0841836735rem + 0.6802721088vw, 1.875rem);
+  padding-top: clamp(1.25rem, 0.9183673469rem + 1.3605442177vw, 2.5rem);
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-l);
+  border: var(--border-light);
+}
+@media (width <= 1400px) {
+  .plan-card__feauters {
+    border-radius: var(--border-radius-m);
+  }
+}
+.plan-card__feauters-title {
+  font-size: clamp(1.125rem, 1.0918367347rem + 0.1360544218vw, 1.25rem);
+}
+.plan-card__list {
+  display: grid;
+  padding-inline: clamp(1.25rem, 0.9183673469rem + 1.3605442177vw, 2.5rem);
+  row-gap: 1.25rem;
+  text-align: start;
+}
+.plan-card__item {
+  display: flex;
+  align-items: center;
+  color: var(--color-grey-30);
+  padding: clamp(0.75rem, 0.3695652174rem + 0.4347826087vw, 0.875rem);
+  border: var(--border-light);
+  border-radius: var(--border-radius-xs);
+  column-gap: clamp(0.5rem, -0.2608695652rem + 0.8695652174vw, 0.75rem);
+}
+@media (width <= 1400px) {
+  .plan-card__item {
+    border-radius: var(--border-radius-xxs);
+  }
+}
+.plan-card__check {
+  --checkWidth: 2rem;
+  width: var(--checkWidth);
+  height: var(--checkWidth);
+  position: relative;
+  border: var(--border-light);
+  border-radius: var(--border-radius-xs);
+}
+@media (width <= 1400px) {
+  .plan-card__check {
+    --checkWidth: 1.5rem;
+    border-radius: var(--border-radius-xxs);
+  }
+}
+.plan-card__check::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  content: "✕";
+  color: var(--color-grey-15);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.plan-card__check.is-active {
+  background-color: var(--color-orange-95);
+  border: none;
+}
+.plan-card__check.is-active::before {
+  content: "✓";
+}
+.plan-card__link {
+  width: 100%;
+  justify-content: center;
+  padding-block: clamp(1.125rem, 0.7445652174rem + 0.4347826087vw, 1.25rem);
+  color: var(--color-white);
+  font-weight: 600;
+  background-color: var(--color-orange-50);
+  border-radius: 0 0 var(--border-radius-l) var(--border-radius-l);
 }
 
 /*# sourceMappingURL=styles.css.map */
