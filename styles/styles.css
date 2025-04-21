@@ -1298,4 +1298,83 @@ button[aria-label]::before {
   }
 }
 
+.footer {
+  margin-top: var(--section-padding-y);
+  padding-top: calc(var(--section-padding-y) * 2);
+  padding-bottom: clamp(1.25rem, -0.652173913rem + 2.1739130435vw, 1.875rem);
+  background-color: var(--color-white);
+}
+.footer__body {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-bottom: clamp(1.25rem, 0.7525510204rem + 2.0408163265vw, 3.125rem);
+}
+@media (width <= 1023px) {
+  .footer__body {
+    flex-direction: column;
+  }
+}
+.footer__contacts {
+  display: grid;
+  row-gap: clamp(1.875rem, 1.7091836735rem + 0.6802721088vw, 2.5rem);
+}
+.footer__contacts-list {
+  display: grid;
+  row-gap: clamp(0.75rem, 0.6173469388rem + 0.5442176871vw, 1.25rem);
+}
+.footer__contacts-link {
+  display: flex;
+  align-items: center;
+  column-gap: 0.46875rem;
+}
+.footer__menu {
+  display: flex;
+  gap: clamp(1.5rem, 0.3586956522rem + 1.3043478261vw, 1.875rem);
+  flex-wrap: wrap;
+}
+.footer__menu-column {
+  min-width: clamp(10rem, 8.5242346939rem + 6.0544217687vw, 15.5625rem);
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(0.625rem, -0.1358695652rem + 0.8695652174vw, 0.875rem);
+}
+.footer__menu-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(0.25rem, -0.5108695652rem + 0.8695652174vw, 0.5rem);
+}
+.footer__menu-link {
+  color: var(--color-grey-35);
+}
+.footer__menu-main-link {
+  font-size: clamp(1.125rem, 1.0918367347rem + 0.1360544218vw, 1.25rem);
+  font-weight: 600;
+}
+.footer__extra {
+  text-align: center;
+  padding-top: clamp(1.25rem, 0.7525510204rem + 2.0408163265vw, 3.125rem);
+  border-top: var(--border-light);
+  color: var(--color-grey-40);
+}
+
+.soc1als__list {
+  display: flex;
+  column-gap: 0.875rem;
+}
+.soc1als__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem;
+  background-color: var(--color-white-97);
+  border: var(--border-light);
+  border-radius: var(--border-radius-s);
+}
+@media (width <= 1400px) {
+  .soc1als__item {
+    border-radius: var(--border-radius-xs);
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
