@@ -1,0 +1,22 @@
+@use '../helpers' as *;
+
+.soc1als {
+    &__list {
+        display: flex;
+        column-gap: #{rem(14)};
+    }
+
+    &__item {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: #{rem(14)};
+        background-color: var(--color-white-97);
+        border: var(--border-light);
+        border-radius: var(--border-radius-s);
+
+        @include laptop {
+            border-radius: var(--border-radius-xs);
+        }
+    }
+}
