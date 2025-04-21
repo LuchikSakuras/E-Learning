@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/styles.css">
     <script src="/scripts/scripts.js" type="module" defer></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
     <title>E-Learning | Home</title>
 </head>
 <body>
@@ -52,8 +56,8 @@
                     </nav>
                 </div>
                 <div class="header__actions">
-                    <button class="header__button button button--transparent" type="button">Sign Up</button>
-                    <button class="header__button button button--main" type="button">Login</button>
+                    <a class="header__button button button--transparent" href="signUp.html">Sign Up</a>
+                    <a class="header__button button button--main" href="login.html">Login</a>
                 </div>
                 <button 
                     class="header__burger-button burger-button visible-tablet"
@@ -194,7 +198,7 @@
                 </div>
             </div>
         </section>
-        <section class="section" aria-labelledby="benefits-title">
+        <section class="section" aria-labelledby="benefits-title" id="benefits-section">
             <header class="section__header container">
                 <div class="section__header-inner">
                     <h2 class="section__title h1" id="benefits-title">Benefits</h2>
@@ -324,7 +328,7 @@
                 </ol>
             </div>
         </section>
-        <section class="section" aria-labelledby="courses-title">
+        <section class="section" aria-labelledby="courses-title" id="courses-section">
             <header class="section__header container">
                 <div class="section__header-inner">
                     <h2 class="section__title h1" id="courses-title">Our Courses</h2>
@@ -700,7 +704,7 @@
                 </ul>
             </div>
         </section>
-        <section class="section" aria-labelledby="testimonials-title">
+        <section class="section" aria-labelledby="testimonials-title"  id="testimonials-section">
             <header class="section__header container">
                 <div class="section__header-inner">
                     <h2 class="section__title h1" id="testimonials-title">Our Testimonials</h2>
@@ -1007,7 +1011,7 @@
                 </div>
             </div>
         </section>
-        <section class="faq" aria-labelledby="faq-title">
+        <section class="faq" aria-labelledby="faq-title" id="faq-section">
             <div class="faq__inner container">
                 <header class="faq__header">
                     <div class="faq__header-inner">
@@ -1193,30 +1197,30 @@
                         <a class="footer__menu-main-link" href="/">Home</a>
                         <ul class="footer__menu-list">
                             <li class="footer__menu-item">
-                                <a class="footer__menu-link" href="/">Benefits</a>
+                                <a class="footer__menu-link" href="#benefits-section">Benefits</a>
                             </li>
                             <li class="footer__menu-item">
-                                <a class="footer__menu-link" href="/">Our Courses</a>
+                                <a class="footer__menu-link" href="#courses-section">Our Courses</a>
                             </li>
                             <li class="footer__menu-item">
-                                <a class="footer__menu-link" href="/">Our Testimonials</a>
+                                <a class="footer__menu-link" href="#testimonials-section">Our Testimonials</a>
                             </li>
                             <li class="footer__menu-item">
-                                <a class="footer__menu-link" href="/">Our FAQ</a>
+                                <a class="footer__menu-link" href="#faq-section">Our FAQ</a>
                             </li>
                         </ul>
                     </div>
                     <div class="footer__menu-column">
-                        <a class="footer__menu-main-link" href="/">About Us</a>
+                        <a class="footer__menu-main-link" href="/about.html">About Us</a>
                         <ul class="footer__menu-list">
                             <li class="footer__menu-item">
-                                <a class="footer__menu-link" href="/">Company</a>
+                                <a class="footer__menu-link" href="/about.html#company">Company</a>
                             </li>
                             <li class="footer__menu-item">
-                                <a class="footer__menu-link" href="/">Achievements</a>
+                                <a class="footer__menu-link" href="/about.html#achievements">Achievements</a>
                             </li>
                             <li class="footer__menu-item">
-                                <a class="footer__menu-link" href="/">Our Goals</a>
+                                <a class="footer__menu-link" href="/about.html#goals">Our Goals</a>
                             </li>
                         </ul>
                     </div>
