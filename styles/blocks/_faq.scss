@@ -1,0 +1,43 @@
+@use '../helpers' as *;
+
+.faq {
+    padding-block: var(--section-padding-y);
+
+    &__inner {
+        display: flex;
+        gap: fluid(80, 40);
+        padding: fluid(100, 24);
+        background-color: var(--color-white);
+        border-radius: var(--border-radius-l);
+
+        @include tablet {
+            flex-direction: column;
+        }
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        row-gap: fluid(50, 20);
+        max-width: fluid(408, 309);
+
+        &-inner {
+            display: grid;
+            row-gap: fluid-to-laptop(10, 8);
+        }
+    }
+
+    &__description {
+        color: var(--color-grey-20);
+    }
+    
+    &__link {
+        border: var(--border-light);
+        border-radius: var(--border-radius-s);
+        align-self: start;
+
+        @include laptop {
+            border-radius: var(--border-radius-xs);
+        }
+    }
+}

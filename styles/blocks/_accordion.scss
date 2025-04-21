@@ -1,0 +1,140 @@
+@use '../helpers' as *;
+
+.accordion {
+    padding: fluid(50, 24) fluid(50, 24) 0 fluid(50, 24);
+    border: var(--border-light);
+    border-radius: var(--border-radius-l);
+
+    @include laptop {
+        border-radius: var(--border-radius-m);
+    }
+
+    &__details {
+        &[open] {
+            .accordion__title{
+                &::before {
+                    rotate: 45deg;;
+                }
+            }
+
+            & + .accordion__content {
+                grid-template-rows: 1fr;
+            }
+        }
+    }
+
+    &__summary {
+        padding-bottom: fluid(35, 20);
+        list-style: none;
+
+        @include hover {
+            color: var(--color-orange-50);
+        }
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+    }
+
+    &__title {
+        position: relative;
+        padding-right: fluid(152, 104);
+        transition-duration: var(--transition-duration);
+
+        &::before {
+            --rightBefore: #{rem(16.5)};
+
+            @include abs-y;
+
+            content: '✕';
+            position: absolute;
+            right: var(--rightBefore);
+            border-radius: #{rem(1)};
+            transition-duration: var(--transition-duration);
+            z-index: 50;
+            border-radius: #{rem(3)};
+
+            @include laptop {
+                --rightBefore: #{rem(13.5)};
+            }
+
+            @include mobile {
+                --rightBefore: #{rem(12.5)};
+            }
+        }
+
+        &::after{
+            --squareSize: #{rem(52)};
+
+            @include square(var(--squareSize));
+            @include abs-y;
+
+            content: '';
+            position: absolute;
+            right: 0;
+            background-color: var(--color-orange-95);
+            border-radius: var(--border-radius-s);
+
+            @include laptop {
+                --squareSize: #{rem(44)};
+
+                border-radius: var(--border-radius-xs);
+            }
+
+            @include mobile {
+                --squareSize: #{rem(40)};
+            }
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition-duration: 0.3s;
+        color: var(--color-grey-30);
+
+        &-inner {
+            overflow: hidden;
+        }
+
+        &-body {
+            padding-block: fluid(50, 20);
+            border-top: var(--border-light);
+        }
+
+        &-link {  
+            position: relative;
+            width: 100%;
+            color: var(--color-grey-20);
+            font-weight: 500;
+            padding: fluid(35, 12) fluid(30, 20);
+            background-color: var(--color-white-97);
+            border: var(--border-light);    
+            border-radius: var(--border-radius-s);
+
+            @include laptop {
+                border-radius: var(--border-radius-xs);
+            }
+
+            &::after {
+                --iconAfterSize: #{rem(56)};
+
+                @include abs-y;
+                @include square(var(--iconAfterSize));
+
+                content: '';
+                right: fluid(20, 13);
+                border-radius: 50%;
+                background: url('../../icon/arrow-right-grey-30.svg') center no-repeat var(--color-white);
+
+                @include laptop {
+                    --iconAfterSize: #{rem(48)};
+                }
+
+                @include mobile {
+                    --iconAfterSize: #{rem(40)};
+                }
+            }
+        }
+    }
+}
