@@ -115,5 +115,10 @@
         font-weight: 600;
         background-color: var(--color-orange-50);
         border-radius: 0 0 var(--border-radius-l) var(--border-radius-l);
+
+        @include hover {
+            color: var(--color-white);
+            background-color: var(--color-grey-40);
+        }
     }
 }
