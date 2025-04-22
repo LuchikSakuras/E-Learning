@@ -4,6 +4,31 @@
     padding: fluid(50, 24);
     row-gap: fluid-to-laptop(30, 24);
 
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: #{rem(50)};
+        padding-bottom: fluid-to-laptop(30, 24);
+
+        @include mobile {
+            flex-direction: column;
+            row-gap: #{rem(20)};
+            align-items: start;
+        }
+    }
+
+    &__inner {
+        display: grid;
+        row-gap: fluid(10, 4);
+    }
+
+    &__images {
+        display: flex;
+        justify-content: space-between;
+        column-gap: #{rem(10)};
+    }
+
     &__image {
         border-radius: var(--border-radius-m);
 
@@ -48,5 +73,73 @@
 
     &__description {
         color: var(--color-grey-30);
+    }
+
+    &__curriculum {
+        display: grid;
+        row-gap: fluid(24, 14);
+        border: var(--border-light);
+        border-radius: var(--border-radius-m);
+        padding-block: fluid(24, 4);
+
+        &-title {
+            padding-inline: fluid(30, 20);
+        }
+
+        &-body {
+            border-top: var(--border-light);
+
+            @include mobile-above {
+                padding-top: fluid(24, 14);
+            }
+        }
+
+        &-list {
+            display: flex;
+            counter-reset: item;
+            list-style: none;
+            justify-content: space-between;
+            
+            @include tablet {
+                flex-wrap: wrap;
+                justify-content: start;
+            }
+
+            @include mobile {
+                flex-direction: column;
+            }
+        }
+
+        &-item {
+            padding-top: fluid(87, 54);
+            padding-inline: fluid-to-laptop(50, 24);
+            position: relative;
+            counter-increment: item;
+
+            &::after {
+                @include fluid-text(50, 30);
+        
+                content: counter(item, decimal-leading-zero);
+        
+                position: absolute;
+                top: fluid(20, 10);
+                left: fluid-to-laptop(50, 24);
+                font-weight: 700;
+            }
+
+            &:not(:last-child) {
+                @include mobile-above {
+                    border-right: var(--border-light);
+                }
+                
+                @include mobile {
+                    border-bottom: var(--border-light);
+                }
+            }
+
+            @include mobile {
+                padding-bottom: #{rem(20)};
+            }
+        }
     }
 }
