@@ -898,6 +898,29 @@ button[aria-label]::before {
   padding: clamp(1.5rem, 1.068877551rem + 1.768707483vw, 3.125rem);
   row-gap: clamp(1.5rem, 0.3586956522rem + 1.3043478261vw, 1.875rem);
 }
+.courses-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 3.125rem;
+  padding-bottom: clamp(1.5rem, 0.3586956522rem + 1.3043478261vw, 1.875rem);
+}
+@media (width <= 767px) {
+  .courses-card__header {
+    flex-direction: column;
+    row-gap: 1.25rem;
+    align-items: start;
+  }
+}
+.courses-card__inner {
+  display: grid;
+  row-gap: clamp(0.25rem, 0.1505102041rem + 0.4081632653vw, 0.625rem);
+}
+.courses-card__images {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 0.625rem;
+}
 .courses-card__image {
   border-radius: var(--border-radius-m);
 }
@@ -937,6 +960,70 @@ button[aria-label]::before {
 }
 .courses-card__description {
   color: var(--color-grey-30);
+}
+.courses-card__curriculum {
+  display: grid;
+  row-gap: clamp(0.875rem, 0.7091836735rem + 0.6802721088vw, 1.5rem);
+  border: var(--border-light);
+  border-radius: var(--border-radius-m);
+  padding-block: clamp(0.25rem, -0.0816326531rem + 1.3605442177vw, 1.5rem);
+}
+.courses-card__curriculum-title {
+  padding-inline: clamp(1.25rem, 1.0841836735rem + 0.6802721088vw, 1.875rem);
+}
+.courses-card__curriculum-body {
+  border-top: var(--border-light);
+}
+@media (width > 767px) {
+  .courses-card__curriculum-body {
+    padding-top: clamp(0.875rem, 0.7091836735rem + 0.6802721088vw, 1.5rem);
+  }
+}
+.courses-card__curriculum-list {
+  display: flex;
+  counter-reset: item;
+  list-style: none;
+  justify-content: space-between;
+}
+@media (width <= 1023px) {
+  .courses-card__curriculum-list {
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+}
+@media (width <= 767px) {
+  .courses-card__curriculum-list {
+    flex-direction: column;
+  }
+}
+.courses-card__curriculum-item {
+  padding-top: clamp(3.375rem, 2.8278061224rem + 2.2448979592vw, 5.4375rem);
+  padding-inline: clamp(1.5rem, -3.4456521739rem + 5.652173913vw, 3.125rem);
+  position: relative;
+  counter-increment: item;
+}
+.courses-card__curriculum-item::after {
+  font-size: clamp(1.875rem, 1.5433673469rem + 1.3605442177vw, 3.125rem);
+  content: counter(item, decimal-leading-zero);
+  position: absolute;
+  top: clamp(0.625rem, 0.4591836735rem + 0.6802721088vw, 1.25rem);
+  left: clamp(1.5rem, -3.4456521739rem + 5.652173913vw, 3.125rem);
+  font-weight: 700;
+}
+@media (width > 767px) {
+  .courses-card__curriculum-item:not(:last-child) {
+    border-right: var(--border-light);
+  }
+}
+@media (width <= 767px) {
+  .courses-card__curriculum-item:not(:last-child) {
+    border-bottom: var(--border-light);
+  }
+}
+@media (width <= 767px) {
+  .courses-card__curriculum-item {
+    padding-bottom: 1.25rem;
+  }
 }
 
 .testimonials-card__description {
@@ -1378,6 +1465,35 @@ button[aria-label]::before {
   .soc1als__item {
     border-radius: var(--border-radius-xs);
   }
+}
+
+.pages {
+  padding-block: var(--section-padding-y);
+}
+.pages__header {
+  display: flex;
+  gap: clamp(1.125rem, -0.2346938776rem + 5.5782312925vw, 6.25rem);
+  padding-block: var(--section-padding-y);
+  border-bottom: 1px solid var(--color-white-90);
+}
+@media (width <= 1023px) {
+  .pages__header {
+    flex-direction: column;
+  }
+}
+.pages__title {
+  max-width: clamp(37.5rem, 9.347826087rem + 32.1739130435vw, 46.75rem);
+}
+.pages__description {
+  max-width: clamp(37.5rem, 9.347826087rem + 32.1739130435vw, 46.75rem);
+}
+.pages__body {
+  margin-top: var(--section-padding-y);
+  padding-block: var(--section-padding-y);
+}
+.pages__list {
+  display: grid;
+  row-gap: clamp(1.25rem, 0.7525510204rem + 2.0408163265vw, 3.125rem);
 }
 
 /*# sourceMappingURL=styles.css.map */
