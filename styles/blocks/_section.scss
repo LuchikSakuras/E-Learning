@@ -21,6 +21,10 @@
             display: grid;
             row-gap: fluid-to-laptop(6, 4);
         }
+
+        &-only-actions {
+            justify-content: center;
+        }
     }
 
     &__description {
