@@ -1,0 +1,72 @@
+@use '../helpers' as *;
+
+.banner {
+    padding-block: var(--section-padding-y);
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: fluid(80, 30);
+        background-color: var(--color-white);
+        border-radius: var(--border-radius-l);
+        gap: #{rem(40)};
+        overflow: hidden;
+
+        @include laptop {
+            border-radius: var(--border-radius-m);
+        }
+
+        @include tablet {
+            flex-direction: column;
+            align-items: start;
+        }
+    }
+
+    &__body {
+        display: grid;
+        position: relative;
+        row-gap: fluid(20, 10);
+        max-width: fluid-to-laptop(1008, 757);
+
+        &::after {
+            --bgImageWidth: #{rem(460)};
+
+            @include square(var(--bgImageWidth));
+
+            content: '';
+
+            position: absolute;
+            right: calc(#{rem(316)} * -1);   
+            background: url('/image/banner-bg.png') center no-repeat;
+        
+            @include tablet-above {
+                top: 50%;
+                translate: 0 -50%;
+            }
+
+            @include tablet {
+                right: calc(#{rem(200)} * -1);
+            }
+
+            @include mobile {
+                --bgImageWidth: #{rem(235)};
+
+                top: #{rem(151)}; 
+                right: calc(#{rem(63)} * -1); 
+            }
+        }
+    }
+
+    &__title {
+        &--accent {
+            color: var(--color-orange-50);
+        }
+    }
+
+    &__title,
+    &__description,
+    &__button {
+        z-index: 50;
+    }
+}

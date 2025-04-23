@@ -1,0 +1,28 @@
+@use '../helpers' as *;
+
+.about-card {
+    display: grid;
+    row-gap: fluid-to-laptop(30, 24);
+    padding: fluid(50, 30);
+
+    &__icon-container {
+        justify-self: start;
+        padding: fluid-to-laptop(16, 14);
+        border: 1px solid var(--color-orange-90);
+        background-color: var(--color-orange-97);
+        border-radius: var(--border-radius-s);
+
+        @include laptop {
+            border-radius: var(--border-radius-xs);
+        }
+    }
+
+    &__body {
+        display: grid;
+        row-gap: fluid(14, 6);
+    }
+
+    &__description {
+        color: var(--color-grey-35);
+    }
+}
