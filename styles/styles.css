@@ -376,6 +376,9 @@ button[aria-label]::before {
   display: grid;
   row-gap: clamp(0.25rem, -0.1304347826rem + 0.4347826087vw, 0.375rem);
 }
+.section__header-only-actions {
+  justify-content: center;
+}
 .section__description {
   color: var(--color-grey-35);
 }
