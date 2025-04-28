@@ -1,0 +1,84 @@
+@use '../helpers' as *;
+
+.contacts {
+    padding-block: var(--section-padding-y);
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--color-white);
+        border-radius: var(--border-radius-l);
+
+        @include tablet {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__form {
+        width: 100%;
+        padding: fluid(80, 30);
+    }
+
+    &__footer {
+        padding: fluid(80, 30);
+
+        @include tablet-above {
+            border-left: var(--border-light);
+        }
+
+        @include tablet {
+            width: 100%;
+            border-top: var(--border-light);
+        }
+    }
+
+    &__list {
+        display: grid;
+        row-gap: fluid(50, 20);
+        justify-content: center;
+
+        &-item {
+            display: flex;
+            width: fluid(360, 298);
+            height: fluid(220, 139);
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--color-white-99);
+            border: var(--border-light);
+            border-radius: var(--border-radius-s);
+            row-gap: fluid-to-laptop(20, 14);
+
+            @include laptop {
+                border-radius: var(--border-radius-xs);
+            }
+        }
+
+        &-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: fluid-to-laptop(20, 14);
+
+            &-svg-wrapper {
+                --svgWrapperSize: #{rem(52)};
+
+                @include square(var(--svgWrapperSize));
+
+                background-color: var(--color-white-97);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: var(--border-light);
+                border-radius: var(--border-radius-s);
+
+                @include laptop {
+                    --svgWrapperSize: #{rem(44)};
+
+                    border-radius: var(--border-radius-xs);
+                }
+            }
+        }
+    }
+}

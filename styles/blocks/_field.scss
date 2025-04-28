@@ -1,0 +1,45 @@
+@use '../helpers' as *;
+
+.field {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(16, 12);
+
+    &:has([required]) .field__label::after {
+        content: "*";
+        padding-inline: #{rem(4)};
+        color: red;
+    }
+
+    &__body {
+        display: flex;
+        column-gap: #{rem(12)};
+    }
+
+    &__control {
+        width: 100%;
+        padding-inline: #{rem(20)};
+        height: fluid-to-laptop(68, 60);
+        background-color: var(--color-white-99);
+        border: var(--border-light);
+        border-radius: var(--border-radius-s);
+
+        &::placeholder {
+            color: var(--color-grey-40);
+        }
+
+        @include laptop {
+            border-radius: var(--border-radius-xs);
+        }
+
+        &-textarea {
+            resize: vertical;
+            min-height: fluid-to-laptop(170, 138);
+            padding-block: fluid(20, 16);
+        }
+    }
+
+    &__errors {
+        color: red;
+    }
+}
