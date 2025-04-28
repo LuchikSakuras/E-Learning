@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/7.6.1/imask.min.js" defer></script>
     <script src="/scripts/scripts.js" type="module" defer></script>
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -73,7 +74,340 @@
             </div>
         </div>
     </header>
-
+    <main>
+        <section class="pages container" aria-labelledby="contact-page-title">
+            <header class="pages__header">
+                <h1 class="pages__title" id="contact-page-title">Contact Us</h1>
+                <div class="pages__description">
+                    <p>Welcome to SkillBridge's Pricing Plan page, where we offer two comprehensive options to cater to your needs: Free and Pro. We believe in providing flexible and affordable pricing options for our services. Whether you're an individual looking to enhance your skills or a business seeking professional development solutions, we have a plan that suits you. Explore our pricing options below and choose the one that best fits your requirements.</p>
+                </div>
+            </header>
+        </section>
+        <section class="contacts" aria-labelledby="contacts-title">
+            <h2 class="visually-hidden" id="contacts-title">Contact Us</h2>
+            <div class="contacts__inner container">
+                <div class="contacts__form">
+                    <h3 class="visually-hidden">Send us a message</h3>
+                    <form class="form" action="/" method="post" data-js-form novalidate>
+                        <div class="form__cell field">
+                            <label class="field__label" for="first-name">
+                                First Name
+                            </label>
+                            <input
+                                class="field__control"
+                                id="first-name"
+                                placeholder="Ivan"
+                                aria-errormessage="name-error"
+                                required
+                            >
+                            <span class="field__errors" id="name-error" data-js-form-field-error></span>
+                        </div>
+                        <div class="form__cell field">
+                            <label class="field__label" for="last-name">
+                                Last Name
+                            </label>
+                            <input
+                                class="field__control"
+                                id="last-name"
+                                placeholder="Ivanov"
+                            >
+                        </div>
+                        <div class="form__cell field">
+                            <label class="field__label" for="email">
+                                Email
+                            </label>
+                            <input
+                                class="field__control"
+                                id="email"
+                                placeholder="user@example.com"
+                                type="email"
+                                aria-errormessage="email-error"
+                                title='Please enter a valid email address in the format "user@example.com"'
+                                pattern="^\S+@\S+\.\S+$"
+                                required
+                            >
+                            <span class="field__errors" id="email-error" data-js-form-field-error></span>
+                        </div>
+                        <div class="form__cell field">
+                            <label class="field__label" for="phone-number">
+                                Phone
+                            </label>
+                            <div class="field__body">
+                                <div class="select">
+                                    <div class="select" data-js-select>
+                                        <label 
+                                            class="select__label visually-hidden" 
+                                            for="phone-number-prefix"
+                                            id="phone-number-prefix-label">
+                                                Phone number prefix
+                                        </label>
+                                        <select 
+                                            class="select__original-control field__control" 
+                                            id="phone-number-prefix" 
+                                            tabindex="-1"
+                                            data-js-select-original-control>
+                                                <option value="+7" selected>+7</option>
+                                                <option value="+1">+1</option>
+                                                <option value="+2">+2</option>
+                                                <option value="+3">+3</option>
+                                        </select>
+                                        <div class="select__body">
+                                            <div 
+                                                class="select__button field__control" 
+                                                tabindex="0" 
+                                                role="combobox"
+                                                aria-controls="phone-number-prefix-select-dropdown"
+                                                aria-expanded="false"
+                                                aria-haspopup="listbox"
+                                                aria-labelledby="phone-number-prefix-label"
+                                                data-js-select-button>
+                                                    +7
+                                            </div>
+                                            <div 
+                                                class="select__dropdown" 
+                                                id="phone-number-prefix-select-dropdown"
+                                                role="listbox"
+                                                aria-labelledby="phone-number-prefix-label"
+                                                data-js-select-dropdown>
+                                                    <div 
+                                                        class="select__option is-selected is-current" 
+                                                        role="option" 
+                                                        aria-selected="true" 
+                                                        id="phone-number-prefix-select-option-1"
+                                                        data-js-select-option>
+                                                            +7
+                                                    </div>
+                                                    <div 
+                                                        class="select__option" 
+                                                        role="option" 
+                                                        aria-selected="false" 
+                                                        id="phone-number-prefix-select-option-2"
+                                                        data-js-select-option>
+                                                            +1
+                                                    </div>
+                                                    <div 
+                                                        class="select__option" 
+                                                        role="option" 
+                                                        aria-selected="false" 
+                                                        id="phone-number-prefix-select-option-3"
+                                                        data-js-select-option>
+                                                            +2
+                                                    </div>
+                                                    <div 
+                                                        class="select__option" 
+                                                        role="option" 
+                                                        aria-selected="false"
+                                                        id="phone-number-prefix-select-option-4"
+                                                        data-js-select-option>
+                                                            +3
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input 
+                                    class="field__control" 
+                                    id="phone-number"
+                                    placeholder="(999) 999-99-99"
+                                    data-js-input-mask="(000) 000-00-00"
+                                    minlength="15"
+                                    aria-errormessage="number-error"
+                                    required
+                                >
+                            </div>
+                            <span class="field__errors" id="number-error" data-js-form-field-error></span>
+                        </div>
+                        <div class="form__cell form__cell--wide field">
+                            <label class="field__label" for="subject">
+                                Subject
+                            </label>
+                            <input
+                                class="field__control"
+                                id="subject"
+                                placeholder="Buy course"
+                                aria-errormessage="subject-error"
+                                required
+                            >
+                            <span class="field__errors" id="number-errors" data-js-form-field-error></span>
+                        </div>
+                        <div class="form__cell form__cell--wide field">
+                            <label class="field__label" for="message">
+                                Message
+                            </label>
+                            <textarea
+                                class="field__control field__control-textarea"
+                                id="message"
+                                placeholder="I want to know more about how the training is going..."
+                            ></textarea>
+                        </div>
+                        <div class="form__cell form__cell--wide">
+                            <div class="form__actions">
+                                <div class="form__agreement">
+                                    <div class="checkbox">
+                                        <div class="checkbox__inner">
+                                            <input 
+                                                class="checkbox__input" 
+                                                id="agreement" 
+                                                name="agreement"
+                                                type="checkbox" 
+                                                title="To continue, please check this box."
+                                                aria-errormessage="agreement-error"
+                                                required
+                                            >
+                                            <label class="checkbox__label" for="agreement">I agree to the collection and processing of personal data</label>
+                                        </div>
+                                        <span class="field__errors" id="agreement-error" data-js-form-field-error></span>
+                                    </div>
+                                </div>
+                                <button class="form__submit-button button button--main" type="submit">Send Your Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <footer class="contacts__footer">
+                    <h3 class="visually-hidden">Our contacts</h3>
+                    <ul class="contacts__list">
+                        <li class="contacts__list-item">
+                            <a class="contacts__list-link" href="support@skillbridge.com">
+                                <div class="contacts__list-link-svg-wrapper">
+                                    <svg
+                                        width="22"
+                                        height="18"
+                                        viewBox="0 0 22 18"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                        <path
+                                            d="M0.5 5.5441V14.125C0.5 15.7819 1.84315 17.125 3.5 17.125H18.5C20.1569 17.125 21.5 15.7819 21.5 14.125V5.5441L12.5723 11.0381C11.6081 11.6314 10.3919 11.6314 9.42771 11.0381L0.5 5.5441Z"
+                                            fill="#262626"
+                                        />
+                                        <path
+                                            d="M21.5 3.78283V3.625C21.5 1.96815 20.1569 0.625 18.5 0.625H3.5C1.84315 0.625 0.5 1.96815 0.5 3.625V3.78283L10.2139 9.76058C10.696 10.0573 11.304 10.0573 11.7861 9.76058L21.5 3.78283Z"
+                                            fill="#262626"
+                                        />
+                                    </svg>
+                                </div>
+                                support@skillbridge.com
+                            </a>
+                        </li>
+                        <li class="contacts__list-item">
+                            <a class="contacts__list-link" href="tel:+910000000000">
+                                <div class="contacts__list-link-svg-wrapper">
+                                    <svg
+                                        width="22"
+                                        height="22"
+                                        viewBox="0 0 22 22"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M0.5 3.125C0.5 1.46815 1.84315 0.125 3.5 0.125H4.87163C5.732 0.125 6.48197 0.710557 6.69064 1.54525L7.79644 5.96843C7.97941 6.7003 7.70594 7.47055 7.10242 7.92318L5.8088 8.8934C5.67447 8.99415 5.64527 9.14168 5.683 9.24469C6.81851 12.3445 9.28051 14.8065 12.3803 15.942C12.4833 15.9797 12.6309 15.9505 12.7316 15.8162L13.7018 14.5226C14.1545 13.9191 14.9247 13.6456 15.6566 13.8286L20.0798 14.9344C20.9144 15.143 21.5 15.893 21.5 16.7534V18.125C21.5 19.7819 20.1569 21.125 18.5 21.125H16.25C7.55151 21.125 0.5 14.0735 0.5 5.375V3.125Z"
+                                            fill="#262626"
+                                        />
+                                    </svg>
+                                </div>
+                                +91 00000 00000
+                            </a>
+                        </li>
+                        <li class="contacts__list-item">
+                            <a class="contacts__list-link" href="/" target="_blank">
+                                <div class="contacts__list-link-svg-wrapper">
+                                    <svg
+                                        width="18"
+                                        height="21"
+                                        viewBox="0 0 18 21"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                        <path
+                                            fill-rule="evenodd"
+                                            clip-rule="evenodd"
+                                            d="M8.53975 20.726C8.56995 20.7435 8.59369 20.7571 8.6105 20.7665L8.63843 20.7821C8.8613 20.9044 9.13776 20.9035 9.36084 20.7825L9.3895 20.7665C9.40631 20.7571 9.43005 20.7435 9.46025 20.726C9.52066 20.691 9.60697 20.64 9.7155 20.5732C9.93246 20.4396 10.2388 20.2426 10.6046 19.9841C11.3351 19.4681 12.3097 18.7024 13.2865 17.7023C15.2307 15.7118 17.25 12.7212 17.25 8.875C17.25 4.31865 13.5563 0.625 9 0.625C4.44365 0.625 0.75 4.31865 0.75 8.875C0.75 12.7212 2.76932 15.7118 4.71346 17.7023C5.69025 18.7024 6.66491 19.4681 7.39539 19.9841C7.76125 20.2426 8.06754 20.4396 8.2845 20.5732C8.39303 20.64 8.47934 20.691 8.53975 20.726ZM9 11.875C10.6569 11.875 12 10.5319 12 8.875C12 7.21815 10.6569 5.875 9 5.875C7.34315 5.875 6 7.21815 6 8.875C6 10.5319 7.34315 11.875 9 11.875Z"
+                                            fill="#262626"
+                                        />
+                                    </svg>
+                                </div>
+                                Some Where in the World
+                            </a>
+                        </li>
+                        <li class="contacts__list-item">
+                            <ul class="soc1als__list">
+                                <li class="soc1als__item">
+                                    <a 
+                                        class="soc1als__link" 
+                                        href="/"
+                                        target="_blank"
+                                        aria-label="Facebook"
+                                        title="Facebook"
+                                    >
+                                        <svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                            <path
+                                                d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.3882 22.954 10.125 23.8542V15.4687H7.07812V12H10.125V9.35625C10.125 6.34875 11.9166 4.6875 14.6576 4.6875C15.9701 4.6875 17.3438 4.92187 17.3438 4.92187V7.875H15.8306C14.34 7.875 13.875 8.80008 13.875 9.75V12H17.2031L16.6711 15.4687H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z"
+                                                fill="#333333"
+                                            />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="soc1als__item">
+                                    <a 
+                                        class="soc1als__link" 
+                                        href="/"
+                                        target="_blank"
+                                        aria-label="Twitter"
+                                        title="Twitter"
+                                    >
+                                        <svg
+                                            width="24"
+                                            height="20"
+                                            viewBox="0 0 24 20"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                            <path
+                                                d="M7.55016 19.7497C16.6045 19.7497 21.5583 12.2465 21.5583 5.74162C21.5583 5.53068 21.5536 5.31505 21.5442 5.10412C22.5079 4.40722 23.3395 3.54401 24 2.55505C23.1025 2.95436 22.1496 3.21514 21.1739 3.32849C22.2013 2.71266 22.9705 1.74523 23.3391 0.605523C22.3726 1.17831 21.3156 1.58237 20.2134 1.80037C19.4708 1.01132 18.489 0.488872 17.4197 0.313807C16.3504 0.138742 15.2532 0.320806 14.2977 0.831852C13.3423 1.3429 12.5818 2.15446 12.1338 3.14107C11.6859 4.12767 11.5754 5.23437 11.8195 6.29005C9.86249 6.19185 7.94794 5.68346 6.19998 4.79785C4.45203 3.91225 2.90969 2.66919 1.67297 1.14927C1.0444 2.233 0.852057 3.5154 1.13503 4.73585C1.418 5.95629 2.15506 7.0232 3.19641 7.71974C2.41463 7.69492 1.64998 7.48444 0.965625 7.10568V7.16662C0.964925 8.30391 1.3581 9.40634 2.07831 10.2865C2.79852 11.1667 3.80132 11.7703 4.91625 11.9947C4.19206 12.1929 3.43198 12.2218 2.69484 12.0791C3.00945 13.0572 3.62157 13.9126 4.44577 14.5261C5.26997 15.1395 6.26512 15.4804 7.29234 15.501C5.54842 16.8709 3.39417 17.6139 1.17656 17.6104C0.783287 17.6098 0.390399 17.5857 0 17.5382C2.25286 18.9835 4.87353 19.7511 7.55016 19.7497Z"
+                                                fill="#333333"
+                                            />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="soc1als__item">
+                                    <a 
+                                        class="soc1als__link" 
+                                        href="/"
+                                        target="_blank"
+                                        aria-label="LinkedIn"
+                                        title="LinkedIn"
+                                    >
+                                        <svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                            <path
+                                                d="M22.2234 0H1.77187C0.792187 0 0 0.773438 0 1.72969V22.2656C0 23.2219 0.792187 24 1.77187 24H22.2234C23.2031 24 24 23.2219 24 22.2703V1.72969C24 0.773438 23.2031 0 22.2234 0ZM7.12031 20.4516H3.55781V8.99531H7.12031V20.4516ZM5.33906 7.43438C4.19531 7.43438 3.27188 6.51094 3.27188 5.37187C3.27188 4.23281 4.19531 3.30937 5.33906 3.30937C6.47813 3.30937 7.40156 4.23281 7.40156 5.37187C7.40156 6.50625 6.47813 7.43438 5.33906 7.43438ZM20.4516 20.4516H16.8937V14.8828C16.8937 13.5563 16.8703 11.8453 15.0422 11.8453C13.1906 11.8453 12.9094 13.2938 12.9094 14.7891V20.4516H9.35625V8.99531H12.7687V10.5609H12.8156C13.2891 9.66094 14.4516 8.70938 16.1813 8.70938C19.7859 8.70938 20.4516 11.0813 20.4516 14.1656V20.4516V20.4516Z"
+                                                fill="#333333"
+                                            />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                            <p>Social Profiles</p>
+                        </li>
+                    </ul>
+                </footer>
+            </div>
+        </section>
+    </main>
     <footer class="footer">
         <div class="footer__inner container">
             <div class="footer__body">
@@ -132,7 +466,7 @@
                             </a>
                         </li>
                         <li class="footer__contacts-item">
-                            <a href="#" class="footer__contacts-link">
+                            <a href="#" class="footer__contacts-link" target="_blank">
                                 <svg
                                     width="18"
                                     height="21"
@@ -185,7 +519,7 @@
                         </ul>
                     </div>
                     <div class="footer__menu-column soc1als">
-                        <a class="footer__menu-main-link" href="/">Social Profiles</a>
+                        <p class="footer__menu-main-link">Social Profiles</p>
                         <ul class="soc1als__list">
                             <li class="soc1als__item">
                                 <a 
