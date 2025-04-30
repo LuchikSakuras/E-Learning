@@ -3,6 +3,7 @@
 .testimonials-card {
     &__description {
         padding: fluid(50, 24);
+        color: var(--color-grey-30);
     }
 
     &__header {
@@ -18,10 +19,6 @@
         @include laptop {
             border-radius: 0 0 var(--border-radius-m) var(--border-radius-m);
         }
-    }
-
-    &__description {
-        color: var(--color-grey-30);
     }
 
     &__name {

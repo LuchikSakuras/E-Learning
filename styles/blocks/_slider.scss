@@ -1,0 +1,30 @@
+@use '../helpers' as *;
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    row-gap: fluid(30, 20);
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        flex: 0 0 100%;
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: fluid-to-laptop(30, 20);
+    }
+
+    &__button {
+        &.is-not-active {
+            color: var(--color-grey-40);
+            pointer-events: none;
+        }
+    }
+}

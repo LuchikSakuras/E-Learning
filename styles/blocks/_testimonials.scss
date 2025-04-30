@@ -1,0 +1,15 @@
+@use '../helpers' as *;
+
+.testimonials {
+    display: grid;
+    row-gap: fluid(80, 40);
+
+    &__header {
+        display: grid;
+        row-gap: fluid-to-laptop(8, 6);
+    }
+
+    &__description {
+        color: var(--color-grey-35);
+    }
+}

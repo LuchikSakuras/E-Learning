@@ -1,0 +1,27 @@
+@use '../helpers' as *;
+
+.authentication-section {
+    padding-block: calc(var(--section-padding-y) * 2);
+
+    &__inner {
+        display: grid;
+        align-items: center;
+        gap: fluid(100, 50);
+
+        @include tablet-above {
+            grid-template-columns: 52% auto;
+        }
+    }
+
+    &__slider {
+        @include tablet {
+            order: 2;
+        }
+    }
+
+    &__authentication-form {
+        @include tablet {
+            order: 1;
+        }
+    }
+}
