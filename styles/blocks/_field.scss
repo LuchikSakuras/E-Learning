@@ -37,9 +37,20 @@
             min-height: fluid-to-laptop(170, 138);
             padding-block: fluid(20, 16);
         }
+
+        &-inner {
+            position: relative;
+        }
     }
 
     &__errors {
         color: red;
+    }
+
+    &__button {
+        position: absolute !important;
+        color: var(--color-grey-30);
+        bottom: fluid-to-laptop(12, 8);
+        right: 0;
     }
 }

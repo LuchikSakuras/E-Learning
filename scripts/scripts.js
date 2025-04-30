@@ -4,10 +4,11 @@ import TabsCollection from './Tabs.js'
 import InputMaskCollection from './InputMask.js'
 import FormValidationCollection from './FormValidation.js'
 import SelectCollection from './Select.js'
+import SliderCollection from './Slider.js'
 
 new Header()
 new VideoPlayerCollection()
 new TabsCollection()
 new InputMaskCollection()
 new FormValidationCollection()
-new SelectCollection()
+new SliderCollection()

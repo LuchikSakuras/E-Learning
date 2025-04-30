@@ -1,0 +1,26 @@
+@use '../helpers' as *;
+
+.progress-dots {
+    display: flex;
+    column-gap: fluid-to-laptop(15, 10);
+
+    &__button {
+        --dotSize: #{rem(15)};
+
+        @include square(var(--dotSize));
+
+        border-radius: 50%;
+        background-color: var(--color-grey-70);
+        border: var(--border-light);
+
+        &.is-active {
+            pointer-events: none;
+            background-color: var(--color-orange-50);
+            border: var(--border-orange);
+        }
+
+        @include hover {
+            background-color: var(--color-orange-75);
+        }
+    }
+}

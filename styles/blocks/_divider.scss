@@ -1,0 +1,26 @@
+@use '../helpers' as *;
+
+.divider {
+    position: relative;
+    text-align: center;
+
+    &::before {
+        @include abs-y;
+
+        content: "";
+        left: 0;
+        right: 0;
+        height: #{rem(1)};
+        background-color: var(--color-white-90);
+        z-index: 0;
+    }
+
+    &__text {
+        display: inline-block; 
+        position: relative;
+        padding-inline: #{rem(12)};
+        z-index: 10;
+        background-color: var(--color-white);
+        color: var(--color-grey-60);
+    }
+}

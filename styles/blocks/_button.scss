@@ -45,6 +45,9 @@
     }
 
     &--light-gray {
+        display: flex;
+        align-items: center;
+        column-gap: #{rem(14)};
         background-color: var(--color-white-97);
         border: var(--border-light);
         font-weight: 500;

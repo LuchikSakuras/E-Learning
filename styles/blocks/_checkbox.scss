@@ -55,4 +55,8 @@
             transition-duration: var(--transition-duration);
         }
     }
+
+    &__label {
+        color: var(--color-grey-35);
+    }
 }
