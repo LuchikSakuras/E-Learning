@@ -51,35 +51,35 @@ class Slider extends BaseComponent{
     }
 
     updateSlidePosition() {
-        const { activePaginationButtonIndex } = this.state;
-        const slideWidth = this.slideElements[0].offsetWidth;
+        const { activePaginationButtonIndex } = this.state
+        const slideWidth = this.slideElements[0].offsetWidth
     
-        this.sliderContainerElement.style.transform = `translateX(-${pxToRem(slideWidth * activePaginationButtonIndex)}rem)`;
+        this.sliderContainerElement.style.transform = `translateX(-${pxToRem(slideWidth * activePaginationButtonIndex)}rem)`
     }
 
     updatePaginationButtons = (direction) => {
-        const stateModifier = direction === 'next' ? 1 : -1;
-        const newIndex = this.state.activePaginationButtonIndex + stateModifier;
+        const stateModifier = direction === 'next' ? 1 : -1
+        const newIndex = this.state.activePaginationButtonIndex + stateModifier
     
         if (newIndex < 0 || newIndex > this.limitPaginationButtonIndex) {
-            return;
+            return
         }
     
-        this.state.activePaginationButtonIndex = newIndex;
+        this.state.activePaginationButtonIndex = newIndex
     
-        const isPreviousButtonNotActive = this.state.activePaginationButtonIndex === 0;
-        const isNextButtonNotActive = this.state.activePaginationButtonIndex === this.limitPaginationButtonIndex;
+        const isPreviousButtonNotActive = this.state.activePaginationButtonIndex === 0
+        const isNextButtonNotActive = this.state.activePaginationButtonIndex === this.limitPaginationButtonIndex
     
-        this.buttonPreviousElement.classList.toggle(this.stateClasses.isNotActive, isPreviousButtonNotActive);
-        this.buttonNextElement.classList.toggle(this.stateClasses.isNotActive, isNextButtonNotActive);
+        this.buttonPreviousElement.classList.toggle(this.stateClasses.isNotActive, isPreviousButtonNotActive)
+        this.buttonNextElement.classList.toggle(this.stateClasses.isNotActive, isNextButtonNotActive)
     }
     
     onButtonPreviousClick = () => {
-        this.updatePaginationButtons('previous');
+        this.updatePaginationButtons('previous')
     }
     
     onButtonNextClick = () => {
-        this.updatePaginationButtons('next');
+        this.updatePaginationButtons('next')
     }    
 
     onPaginationButtonClick(index) {

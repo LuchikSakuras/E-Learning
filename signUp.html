@@ -279,7 +279,7 @@
                             >
                             <span class="field__errors" id="email-error" data-js-form-field-error></span>
                         </div>
-                        <div class="form__cell field">
+                        <div class="form__cell field" data-js-password>
                             <label class="field__label" for="password">
                                 Password
                             </label>
@@ -292,9 +292,10 @@
                                 type="password"
                                 title="The password must contain lowercase and uppercase Latin letters, numbers, special characters. Minimum 8 characters"
                                 pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                                data-js-password-input
                                 required
                             >
-                                <button class="field__button button button--transparent" type="button" aria-label="Show password" title="Show password">
+                                <button class="field__button button button--transparent" type="button" aria-label="Show password" title="Show password" data-js-password-button>
                                     <svg
                                         width="22"
                                         height="17"
@@ -316,6 +317,7 @@
                                 </button>
                             </div>
                             <span class="field__errors" id="password-error" data-js-form-field-error></span>
+                            <a class="field__link" href="/">Forgot Password?</a>
                         </div>
                         <div class="form__agreement">
                             <div class="checkbox">
