@@ -10,28 +10,53 @@
         color: var(--color-grey-40);
     }
 
-    &::after {
-        --iconSize: #{rem(24)};
-
-        @include square(var(--iconSize));
-
-        content: '';
-        flex-shrink: 0;
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        color: currentColor;
-    }
-
-    &--white-arrow {
+    &--right {
         &::after {
-            background-image: url('../../icon/arrow-left-white.svg');
+            --iconSize: #{rem(24)};
+
+            @include square(var(--iconSize));
+
+            content: '';
+            flex-shrink: 0;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            color: currentColor;
+        }
+
+        &-white-arrow {
+            &::after {
+                background-image: url('../../icon/arrow-left-white.svg');
+            }
+        }
+
+        &-grey-arrow {
+            &::after {
+                background-image: url('../../icon/arrow-top-right-grey.svg');
+            }
         }
     }
 
-    &--grey-arrow {
-        &::after {
-            background-image: url('../../icon/arrow-top-right-grey.svg');
+    &--left {
+        column-gap: #{rem(4)};
+
+        &::before {
+            --iconSize: #{rem(24)};
+
+            @include square(var(--iconSize));
+
+            content: '';
+            flex-shrink: 0;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            color: currentColor;
+        }
+
+        &-time {
+            &::before {
+                background-image: url('../../icon/time.svg');
+            }
         }
     }
 }

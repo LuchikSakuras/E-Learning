@@ -11,12 +11,12 @@
     <link rel="manifest" href="/favicon/site.webmanifest">
     <title>E-Learning | Course</title>
 </head>
-<body>
+<body data-js-course>
     <header class="header" data-js-header>
         <div class="header__promo">
             <div class="header__promo-inner container">
                 <a class="header__promo-link" href="/">
-                    <span class="icon icon--white-arrow">Free Courses 🌟 Sale Ends Soon, Get It Now</span>
+                    <span class="icon icon--right icon--right-white-arrow">Free Courses 🌟 Sale Ends Soon, Get It Now</span>
                 </a>
             </div>
         </div>
@@ -73,7 +73,46 @@
             </div>
         </div>
     </header>
-
+    <section class="pages container" aria-labelledby="course-page-title">
+        <header class="pages__header" data-js-course-header>
+            <h1 class="pages__title" id="course-page-title" data-js-course-header-title></h1>
+            <div class="pages__description" data-js-course-header-description></div>
+        </header>
+    </section>
+    <section class="video" aria-labelledby="video-title">
+        <h2 class="visually-hidden" id="video-title"></h2>
+        <div class="video__inner container">
+            <div class="video-player" data-js-video-player>
+                <video 
+                    class="video-player__video" 
+                    src=""
+                    poster=""
+                    width="1596" height="790"
+                    data-js-video-player-video>
+                </video>
+                <div class="video-player__pannel is-active" data-js-video-player-pannel>
+                    <button 
+                        class="video-player__play-button" 
+                        type="button" 
+                        aria-label="Play video" 
+                        title="Play video" 
+                        data-js-video-player-play-button>
+                            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.8597 6.24923C11.6622 4.86387 8.7998 6.44307 8.7998 9.04079V34.9593C8.7998 37.557 11.6622 39.1362 13.8597 37.7509L34.4158 24.7916C36.4692 23.497 36.4692 20.5031 34.4158 19.2085L13.8597 6.24923Z" fill="white"/>
+                            </svg>                                                                          
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section" aria-labelledby="program-title">
+        <h2 class="visually-hidden" id="program-title">Course program</h2>
+        <div class="program container">
+            <ol class="program__list grid grid--2" data-js-course-program>
+                
+            </ol>
+        </div>
+    </section>
     <footer class="footer">
         <div class="footer__inner container">
             <div class="footer__body">

@@ -1,0 +1,29 @@
+@use '../helpers' as *;
+
+.lesson-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: var(--border-radius-xs);
+    border: var(--border-light);
+    padding: fluid-to-laptop(24, 20) fluid-to-laptop(30, 24);
+    gap: #{rem(15)};
+
+    @include tablet {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    &__info {
+        display: grid;
+        row-gap: #{rem(6)};
+    }
+
+    &__badge {
+        white-space: nowrap;
+        color: var(--color-grey-35);
+        background-color: var(--color-white-97);
+        padding: #{rem(12)};
+        border-radius: var(--border-radius-xs);
+    }
+}

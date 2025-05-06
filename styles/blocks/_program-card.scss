@@ -1,0 +1,25 @@
+@use '../helpers' as *;
+
+.program-card {
+    position: relative;
+    display: grid;
+    row-gap: fluid(50, 30);
+    padding: fluid(159, 97) fluid(50, 30) fluid(50, 30);
+    counter-increment: item;
+
+    &::after {
+        @include fluid-text(80, 50);
+
+        content: counter(item, decimal-leading-zero);
+
+        position: absolute;
+        top: fluid(50, 30);
+        right: fluid(50, 30);
+        font-weight: 700;
+    }
+
+    &__lessons {
+        display: grid;
+        row-gap: fluid-to-laptop(20, 16);
+    }
+}
