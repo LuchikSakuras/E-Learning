@@ -26,13 +26,13 @@
 
         &-white-arrow {
             &::after {
-                background-image: url('../../icon/arrow-left-white.svg');
+                background-image: url('../icon/arrow-left-white.svg');
             }
         }
 
         &-grey-arrow {
             &::after {
-                background-image: url('../../icon/arrow-top-right-grey.svg');
+                background-image: url('../icon/arrow-top-right-grey.svg');
             }
         }
     }
@@ -55,7 +55,7 @@
 
         &-time {
             &::before {
-                background-image: url('../../icon/time.svg');
+                background-image: url('../icon/time.svg');
             }
         }
     }
