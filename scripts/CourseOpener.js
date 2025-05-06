@@ -20,7 +20,7 @@ class CourseOpener {
         const dataValue = linkElement.getAttribute('data-js-courses-link');
         const courseId = Number(dataValue);
 
-        const newUrl = `/course.html?index=${courseId}`;
+        const newUrl = `course.html?index=${courseId}`;
         window.location.href = newUrl;
     }
 
