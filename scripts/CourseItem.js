@@ -2,8 +2,8 @@ const CourseItem = [
     {
         title: 'UI/UX Design Course',
         description: 'Welcome to our UI/UX Design course! This comprehensive program will equip you with the knowledge and skills to create exceptional user interfaces (UI) and enhance user experiences (UX). Dive into the world of design thinking, wireframing, prototyping, and usability testing. Below is an overview of the curriculum',
-        videoUrl: '/videos/example.mp4',
-        posterUrl: '/image/course/video/poster-1.jpg',
+        videoUrl: 'videos/example.mp4',
+        posterUrl: 'image/course/video/poster-1.jpg',
         program: [
             {
                 title: 'Introduction to UI/UX Design',
@@ -110,8 +110,8 @@ const CourseItem = [
     {
         title: 'Web Design Fundamentals Course',
         description: 'Welcome to our Web Design Fundamentals course! This comprehensive program will equip you with the knowledge and skills to create exceptional user interfaces (UI) and enhance user experiences (UX). Dive into the world of design thinking, wireframing, prototyping, and usability testing. Below is an overview of the curriculum',
-        videoUrl: '/videos/example.mp4',
-        posterUrl: '/image/course/video/poster-1.jpg',
+        videoUrl: 'videos/example.mp4',
+        posterUrl: 'image/course/video/poster-1.jpg',
         program: [
             {
                 title: 'Introduction to HTML',
@@ -218,8 +218,8 @@ const CourseItem = [
     {
         title: 'Mobile App Development Course',
         description: 'Welcome to our Mobile App Development! This comprehensive program will equip you with the knowledge and skills to create exceptional user interfaces (UI) and enhance user experiences (UX). Dive into the world of design thinking, wireframing, prototyping, and usability testing. Below is an overview of the curriculum',
-        videoUrl: '/videos/example.mp4',
-        posterUrl: '/image/course/video/poster-1.jpg',
+        videoUrl: 'videos/example.mp4',
+        posterUrl: 'image/course/video/poster-1.jpg',
         program: [
             {
                 title: 'Introduction to Mobile App Development',
@@ -326,8 +326,8 @@ const CourseItem = [
     {
         title: 'Graphic Design for Beginners Course',
         description: 'Welcome to our Graphic Design for Beginners course! This comprehensive program will equip you with the knowledge and skills to create exceptional user interfaces (UI) and enhance user experiences (UX). Dive into the world of design thinking, wireframing, prototyping, and usability testing. Below is an overview of the curriculum',
-        videoUrl: '/videos/example.mp4',
-        posterUrl: '/image/course/video/poster-1.jpg',
+        videoUrl: 'videos/example.mp4',
+        posterUrl: 'image/course/video/poster-1.jpg',
         program: [
             {
                 title: 'Introduction to Graphic Design',
@@ -434,8 +434,8 @@ const CourseItem = [
     {
         title: 'Front-End Web Development Course',
         description: 'Welcome to our Front-End Web Development course! This comprehensive program will equip you with the knowledge and skills to create exceptional user interfaces (UI) and enhance user experiences (UX). Dive into the world of design thinking, wireframing, prototyping, and usability testing. Below is an overview of the curriculum',
-        videoUrl: '/videos/example.mp4',
-        posterUrl: '/image/course/video/poster-1.jpg',
+        videoUrl: 'videos/example.mp4',
+        posterUrl: 'image/course/video/poster-1.jpg',
         program: [
             {
                 title: 'HTML Fundamentals',
