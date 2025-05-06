@@ -6,6 +6,8 @@ import FormValidationCollection from './FormValidation.js'
 import SelectCollection from './Select.js'
 import SliderCollection from './Slider.js'
 import PasswordToggleCollection from './PasswordToggle.js'
+import CourseOpenerCollection from './CourseOpener.js'
+import CoursePageUpdaterCollection from './CoursePageUpdater.js'
 
 new Header()
 new VideoPlayerCollection()
@@ -15,3 +17,5 @@ new FormValidationCollection()
 new SelectCollection()
 new SliderCollection()
 new PasswordToggleCollection()
+new CourseOpenerCollection()
+new CoursePageUpdaterCollection()
