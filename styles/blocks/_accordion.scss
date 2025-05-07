@@ -125,7 +125,7 @@
                 content: '';
                 right: fluid(20, 13);
                 border-radius: 50%;
-                background: url('../icon/arrow-right-grey-30.svg') center no-repeat var(--color-white);
+                background: url('/E-Learning/icon/arrow-right-grey-30.svg') center no-repeat var(--color-white);
 
                 @include laptop {
                     --iconAfterSize: #{rem(48)};

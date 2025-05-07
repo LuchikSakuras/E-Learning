@@ -47,7 +47,7 @@
             @include square(var(--size));
 
             content: '';
-            background: url('../icon/arrow-down.svg') center/contain no-repeat;
+            background: url('/E-Learning/icon/arrow-down.svg') center/contain no-repeat;
             transition-duration: var(--transition-duration);
 
             @include laptop {
