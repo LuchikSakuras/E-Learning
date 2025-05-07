@@ -4,6 +4,8 @@
     @include square(#{rem(34)});
 
     display: inline-flex;
+    position: relative;
+    align-items: center;
     flex-direction: column;
     justify-content: space-between;
     padding: #{rem(8.5)} #{rem(4.25)};
@@ -16,37 +18,36 @@
 
     &.is-active {
         .burger-button__line {
+            position: absolute;
+
             &:first-child {
-                rotate: 45deg;
-                transform-origin: 0;
-                translate: 0.25em -0.1em;
+                transform: rotate(45deg);
+                
             }
             &:nth-child(2) {
-                rotate: -45deg;
+                transform: scaleX(0);
+                transition-duration: .5s;
             }
             &:last-child {
-                width: 0;
+                transform: rotate(-45deg);
             }
-        }
-    }
-      
-    &:not(.is-active) {
-        .burger-button__line--3 {
-            stroke-dasharray: 30 207;
-            stroke-dashoffset: -30;
         }
     }
 
     &__line {
         width: 100%;
         height: #{rem(2)};
-        background-color: currentColor;
+        background-color: var(--color-grey-15);
         border-radius: #{rem(1)};
         transition-duration: var(--transition-duration);
 
+        &:first-child,
         &:last-child {
-            width: 50%;
-            align-self: end;
+            width: 70%;
+        }
+
+        &:nth-child(2) {
+            transition-duration: .8s;
         }
     }
 }
