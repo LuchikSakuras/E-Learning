@@ -38,7 +38,7 @@
 
             position: absolute;
             right: calc(#{rem(316)} * -1);   
-            background: url('../image/banner-bg.png') center no-repeat;
+            background: url('/E-Learning/image/banner-bg.png') center no-repeat;
         
             @include tablet-above {
                 top: 50%;
