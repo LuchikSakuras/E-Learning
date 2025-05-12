@@ -46,8 +46,8 @@
 }
 
 @mixin square($size) {
-    width: $size;
-    height: $size;
+    min-width: $size;
+    min-height: $size;
 }
 
 @mixin visually-hidden {

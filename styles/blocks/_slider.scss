@@ -16,6 +16,7 @@
 
     &__actions {
         display: flex;
+        color: var(--color-grey-15);
         justify-content: center;
         align-items: center;
         column-gap: fluid-to-laptop(30, 20);

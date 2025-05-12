@@ -12,7 +12,7 @@
     &__details {
         &[open] {
             .accordion__title{
-                &::before {
+                &::after {
                     rotate: 45deg;;
                 }
             }
@@ -41,27 +41,7 @@
         padding-right: fluid(152, 104);
         transition-duration: var(--transition-duration);
 
-        &::before {
-            --rightBefore: #{rem(16.5)};
 
-            @include abs-y;
-
-            content: '✕';
-            position: absolute;
-            right: var(--rightBefore);
-            border-radius: #{rem(1)};
-            transition-duration: var(--transition-duration);
-            z-index: 50;
-            border-radius: #{rem(3)};
-
-            @include laptop {
-                --rightBefore: #{rem(13.5)};
-            }
-
-            @include mobile {
-                --rightBefore: #{rem(12.5)};
-            }
-        }
 
         &::after{
             --squareSize: #{rem(52)};
@@ -69,11 +49,14 @@
             @include square(var(--squareSize));
             @include abs-y;
 
-            content: '';
+            content: '✕';
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
             position: absolute;
             right: 0;
             background-color: var(--color-orange-95);
-            border-radius: var(--border-radius-s);
+            border-radius: 50%;
 
             @include laptop {
                 --squareSize: #{rem(44)};
@@ -102,19 +85,9 @@
             border-top: var(--border-light);
         }
 
-        &-link {  
-            position: relative;
-            width: 100%;
-            color: var(--color-grey-20);
-            font-weight: 500;
-            padding: fluid(35, 12) fluid(30, 20);
-            background-color: var(--color-white-97);
-            border: var(--border-light);    
-            border-radius: var(--border-radius-s);
-
-            @include laptop {
-                border-radius: var(--border-radius-xs);
-            }
+        &-link {
+            display: block;
+            padding-right: fluid(60, 45);
 
             &::after {
                 --iconAfterSize: #{rem(56)};
@@ -134,6 +107,21 @@
                 @include mobile {
                     --iconAfterSize: #{rem(40)};
                 }
+            }
+        }
+
+        &-link-wrapper {  
+            position: relative;
+            width: 100%;
+            color: var(--color-grey-20);
+            font-weight: 500;
+            padding: fluid(35, 12) fluid(30, 20);
+            background-color: var(--color-white-97);
+            border: var(--border-light);    
+            border-radius: var(--border-radius-s);
+
+            @include laptop {
+                border-radius: var(--border-radius-xs);
             }
         }
     }
