@@ -2,6 +2,6 @@
 
 .logo {
     &__image {
-        min-width: #{rem(40)};
+        min-width: fluid(54, 40);
     }
 }

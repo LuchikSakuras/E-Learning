@@ -314,7 +314,7 @@ button[aria-label]::before {
 }
 
 .logo__image {
-  min-width: 2.5rem;
+  min-width: clamp(2.5rem, 2.2678571429rem + 0.9523809524vw, 3.375rem);
 }
 
 .tile {

@@ -60,8 +60,6 @@
 
             @include laptop {
                 --squareSize: #{rem(44)};
-
-                border-radius: var(--border-radius-xs);
             }
 
             @include mobile {
